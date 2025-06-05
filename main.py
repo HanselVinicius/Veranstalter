@@ -1,5 +1,5 @@
 import typer
-import src.OrganizeCommand as OrganizeCommand
+import src.command.OrganizeCommand as OrganizeCommand
 
 app = typer.Typer()
 

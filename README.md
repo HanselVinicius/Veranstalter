@@ -3,19 +3,24 @@
 ## Organizador de pastas, porque as minhas estão uma bagunça...
 
 
-```.bash
+```console
     python -m venv venv
 ```
 
-- Windows
+### Windows
 
-```.bash
+```bat
     venv\Scripts\activate
 ```
 
+### Linux
 
-- Linux
-
-```.bash
+```bash
     source venv/bin/activate
 ``` 
+
+
+## Bibliotecas utilizadas
+
+- typer
+- python-fsutil
