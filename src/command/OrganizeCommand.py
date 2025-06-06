@@ -5,5 +5,4 @@ app = typer.Typer()
 @app.command()
 def organize_by_extension(dir:str) -> None:
     executeOrganize(dir)
-    print(f"Files by extension:  {dir}.")
     
