@@ -1,10 +1,10 @@
 from fsutil import create_dir,exists,move_file
-from src.model.Extensions import Document
-CREATE_DIRECTORY = "documents"
+from src.model.Extensions import Media
+CREATE_DIRECTORY = "medias"
 
-class DocumentOrganizer:
+class MediaOrganizer:
     def __init__(self, files: list[str], dir: str):
-        self.files = [file for file in files if file.endswith(tuple(Document))]
+        self.files = [file for file in files if file.endswith(tuple(Media))]
         print(f"Found {len(self.files)} {CREATE_DIRECTORY} files.")
         self.dir = dir
 
@@ -22,7 +22,7 @@ class DocumentOrganizer:
             move_file(file, dir,overwrite=True)
 
     def __eq__(self, other):
-        if not isinstance(other, DocumentOrganizer):
+        if not isinstance(other, MediaOrganizer):
             return False
         return set(self.files) == set(other.files)
 

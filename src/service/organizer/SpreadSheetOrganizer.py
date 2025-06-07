@@ -1,9 +1,25 @@
+from fsutil import create_dir,exists,move_file
+from src.model.Extensions import Spreadsheet
+CREATE_DIRECTORY = "spreadsheets"
+
 class SpreadSheetOrganizer:
-    def __init__(self, files: list[str]):
-        self.files = files
+    def __init__(self, files: list[str], dir: str):
+        self.files = [file for file in files if file.endswith(tuple(Spreadsheet))]
+        print(f"Found {len(self.files)} {CREATE_DIRECTORY} files.")
+        self.dir = dir
 
     def organize(self):
-        print("Organizing spreadsheet files...")
+        createDirectory = self.dir + "/" + CREATE_DIRECTORY
+        self._createDirectory(createDirectory)
+        self._moveFilesToDirectory(createDirectory)
+
+    def _createDirectory(self, dir: str):
+        if not exists(dir):
+            create_dir(dir) 
+
+    def _moveFilesToDirectory(self, dir: str):
+        for file in self.files:
+            move_file(file, dir,overwrite=True)
 
     def __eq__(self, other):
         if not isinstance(other, SpreadSheetOrganizer):

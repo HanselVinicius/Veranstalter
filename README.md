@@ -25,9 +25,19 @@
 - toda classe de teste deve seguir o formato com Test****.py
 - todo arquivo de teste deve seguir o formato **_test.py
 
-## Bibliotecas utilizadas
+```bash
+    pytest tests
+```
 
-- typer
-- python-fsutil
-- pytest
-- pytest-mock
+## Bibliotecas utilizadas
+- [typer](https://typer.tiangolo.com/)
+- [python-fsutil](https://pypi.org/project/python-fsutil/)
+- [pytest](https://docs.pytest.org/en/stable/index.html)
+- [pytest-mock](https://pypi.org/project/pytest-mock/)
+
+
+## Exemplo de Comandos 
+
+```bash
+    python main.py organize organize-by-extension D:\downloads
+```

@@ -1,11 +1,12 @@
+from src.model.Extensions import Spreadsheet, Document, Media, Pack
 def isSpreadsheet(extension:str) -> bool:
-    return extension in ["csv", "xlsx", "xls"]
+    return extension in Spreadsheet
 
 def isDocument(extension:str) -> bool:
-    return extension in ["doc", "docx", "pdf", "txt", "md", "html"]
+    return extension in Document
 
 def isMedia(extension:str) -> bool:
-    return extension in ["jpg", "jpeg", "png", "gif", "mp4", "mp3", "wav", "avi"]
+    return extension in Media
 
 def isPack(extension:str) -> bool:
-    return extension in ["zip", "tar", "rar", "7z", "gz","exe"]
+    return extension in Pack
