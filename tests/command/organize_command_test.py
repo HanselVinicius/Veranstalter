@@ -1,4 +1,3 @@
-import pytest
 from src.command.OrganizeCommand import organize_by_extension
 
 class TestOrganizeCommand:
