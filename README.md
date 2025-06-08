@@ -1,6 +1,6 @@
 # Veranstalter
 
-## Organizador de pastas, porque as minhas estão uma bagunça...
+## Folder organizer, because mine are a mess...
 
 
 ```console
@@ -19,25 +19,29 @@
     source venv/bin/activate
 ``` 
 
-## Testes
+## Tests
 
-- todo arquivo de teste deve ficar na pasta /tests na raiz do projeto
-- toda classe de teste deve seguir o formato com Test****.py
-- todo arquivo de teste deve seguir o formato **_test.py
+- Every test file must be in the /tests folder at the root of the project
+- Every test class should follow the format Test****.py
+- Every test file should follow the format **_test.py
 
 ```bash
     pytest tests
 ```
 
-## Bibliotecas utilizadas
+## Libraries used
 - [typer](https://typer.tiangolo.com/)
 - [python-fsutil](https://pypi.org/project/python-fsutil/)
 - [pytest](https://docs.pytest.org/en/stable/index.html)
 - [pytest-mock](https://pypi.org/project/pytest-mock/)
 
 
-## Exemplo de Comandos 
+## Example Commands
 
 ```bash
     python main.py organize organize-by-extension D:\downloads
 ```
+
+## Workflows 
+
+![alt text](image.png)

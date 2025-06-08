@@ -14,7 +14,6 @@ def executeOrganize(dir:str) -> None:
         return
     
     for factory in factoryList:
-        print(f"factory name :   {factory.__class__.__name__}")
         factory.organize()
     
 def _getExtensions(files:list[str]) -> list[str]:
